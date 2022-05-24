@@ -1,0 +1,127 @@
+Create database DSUMBeograd;
+Create database DSUMNoviSad;
+Create database DSUMNis;
+
+CREATE TABLE [dbo].[tblKorisnici]
+(
+    [Id] INT NOT NULL PRIMARY KEY, 
+    [Naziv] NVARCHAR(50) NOT NULL, 
+    [Sifra] NVARCHAR(50) NOT NULL, 
+    [Tip] INT NOT NULL
+)
+
+CREATE TABLE [dbo].[tblLokacije]
+(
+    [Id] INT NOT NULL PRIMARY KEY, 
+    [Sifra] NVARCHAR(50) NOT NULL, 
+    [Naziv] NVARCHAR(50) NOT NULL
+)
+
+CREATE TABLE [dbo].[tblUsluge]
+(
+    [Id] INT NOT NULL PRIMARY KEY, 
+    [Sifra] NVARCHAR(50) NOT NULL, 
+    [Naziv] NVARCHAR(50) NOT NULL, 
+    [Komentar] NVARCHAR(150) NOT NULL, 
+    [Datum] DATETIME NOT NULL, 
+    [Cena] INT NOT NULL
+)
+
+CREATE TABLE [dbo].[tblPreuzeneUsluge] (
+    [Korisnik] INT            NOT NULL,
+    [Usluga]   INT            NOT NULL,
+    [Lokacija] INT            NOT NULL,
+    [Vreme]    DATETIME       NOT NULL,
+    [Opis]     NVARCHAR (100) NOT NULL,
+    [Id]       INT            NOT NULL,
+    CONSTRAINT [PK_tblPreuzeneUsluge] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_tblPreuzeneUsluge_tblKorisnici] FOREIGN KEY ([Korisnik]) REFERENCES [dbo].[tblKorisnici] ([Id]),
+    CONSTRAINT [FK_tblPreuzeneUsluge_tblLokacije] FOREIGN KEY ([Lokacija]) REFERENCES [dbo].[tblLokacije] ([Id]),
+    CONSTRAINT [FK_tblPreuzeneUsluge_tblUsluge] FOREIGN KEY ([Usluga]) REFERENCES [dbo].[tblUsluge] ([Id])
+);
+
+-----POCETNI PODACI-----------
+
+-------Beograd---------------
+INSERT INTO tblKorisnici (Id, Naziv, Sifra, Tip)
+VALUES (1, 'Marko', 'Ad3hf', 1),
+       (2, 'Mira', 'Bd4hf', 1),
+	 (3, 'Adam', 'Ka9hf', 2),
+	 (4, 'Jovan', 'Ll2hf', 4);
+
+INSERT INTO tblLokacije (Id, Naziv, Sifra)
+VALUES (1, 'Novi_Beograd', 'ddd3f'),
+       (2, 'Zemun', 'ads32'),
+	 (3, 'Slavija', 'dppa4');
+
+INSERT INTO tblUsluge (Id, Naziv, Sifra, Komentar, Datum, Cena)
+VALUES (1, 'Popravka', 'ddd3fdas', 'Popravljanje kvara', '2020-2-2', 2000),
+       (2, 'Izrada', 'dasd4fdas', 'Izrada novog dela', '2021-3-4', 10000),
+	 (3, 'Odrzavanje', 'AAd43fdas', 'Odrzavanje postrojenja', '2023-2-2', 5000);
+
+INSERT INTO tblPreuzeneUsluge (Id, Korisnik, Lokacija, Usluga, Opis, Vreme)
+VALUES (1, 1, 1, 1, 'Popravka kvara na masini', '2023-5-6'),
+       (2, 1, 3, 2, 'Izradjen prototip', '2023-4-10'),
+	   (3, 3, 2, 3, 'Odrzavanje sistema', '2024-6-6')
+
+
+-------NoviSad---------------
+
+INSERT INTO tblKorisnici (Id, Naziv, Sifra, Tip)
+VALUES (1, 'Jovan', 'Ad3hf', 1),
+       (2, 'Sara', 'Bd4hf', 1),
+	 (3, 'Miljan', 'Ka9hf', 2),
+	 (4, 'Maja', 'Ll2hf', 4);
+
+INSERT INTO tblLokacije (Id, Naziv, Sifra)
+VALUES (1, 'Liman', 'ddd3f'),
+       (2, 'Sajmiste', 'ads32'),
+	 (3, 'Salajka', 'dppa4');
+
+INSERT INTO tblUsluge (Id, Naziv, Sifra, Komentar, Datum, Cena)
+VALUES (1, 'Popravka', 'ddd3fdas', 'Popravljanje kvara', '2020-2-2', 2000),
+       (2, 'Izrada', 'dasd4fdas', 'Izrada novog dela', '2021-3-4', 10000),
+	 (3, 'Odrzavanje', 'AAd43fdas', 'Odrzavanje postrojenja', '2023-2-2', 5000);
+
+INSERT INTO tblPreuzeneUsluge (Id, Korisnik, Lokacija, Usluga, Opis, Vreme)
+VALUES (1, 3, 1, 1, 'Popravka kvara na masini', '2023-5-6'),
+       (2, 4, 3, 2, 'Izradjen prototip', '2023-4-10'),
+	 (3, 1, 2, 3, 'Odrzavanje sistema', '2024-6-6'),
+       (4, 2, 2, 3, 'Odrzavanje sistema', '2024-6-6')
+
+
+-------Nis---------------
+
+INSERT INTO tblKorisnici (Id, Naziv, Sifra, Tip)
+VALUES (1, 'Safet', 'Ad3hf', 1),
+       (2, 'Predrag', 'Bd4hf', 1),
+	 (3, 'Zarko', 'Ka9hf', 2),
+	 (4, 'Steva', 'Ll2hf', 4);
+
+INSERT INTO tblLokacije (Id, Naziv, Sifra)
+VALUES (1, 'Cair', 'ddd3f'),
+       (2, 'Durlan', 'ads32'),
+	 (3, 'Duvaniste', 'dppa4');
+
+INSERT INTO tblUsluge (Id, Naziv, Sifra, Komentar, Datum, Cena)
+VALUES (1, 'Popravka', 'ddd3fdas', 'Popravljanje kvara', '2020-2-2', 2000),
+       (2, 'Izrada', 'dasd4fdas', 'Izrada novog dela', '2021-3-4', 10000),
+	 (3, 'Odrzavanje', 'AAd43fdas', 'Odrzavanje postrojenja', '2023-2-2', 5000);
+
+INSERT INTO tblPreuzeneUsluge (Id, Korisnik, Lokacija, Usluga, Opis, Vreme)
+VALUES (1, 3, 1, 1, 'Popravka kvara na masini', '2023-5-6'),
+       (2, 4, 3, 2, 'Izradjen prototip', '2023-4-10'),
+	 (3, 1, 2, 3, 'Odrzavanje sistema', '2024-6-6'),
+       (4, 2, 3, 3, 'Odrzavanje sistema', '2024-6-6')
+
+-----Join za pruzene usluge-----
+
+
+SELECT Id, Naziv_Korisnika, Naziv_Usluge, Naziv_Lokacije, Vreme, Opis
+From tblPreuzeneUsluge as pu
+INNER JOIN (SELECT Id as Idk, Naziv as Naziv_Korisnika from tblKorisnici) as korisnici
+ON pu.Korisnik = korisnici.Idk
+INNER JOIN (SELECT Id as Idu, Naziv as Naziv_Usluge from tblUsluge) as usluge
+ON pu.Usluga = usluge.Idu
+INNER JOIN (SELECT Id as Idl, Naziv as Naziv_Lokacije from tblLokacije) as lokacije
+ON pu.Lokacija = lokacije.Idl

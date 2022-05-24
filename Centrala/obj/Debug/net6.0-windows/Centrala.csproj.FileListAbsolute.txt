@@ -1,0 +1,17 @@
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\bin\Debug\net6.0-windows\Centrala.exe
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\bin\Debug\net6.0-windows\Centrala.deps.json
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\bin\Debug\net6.0-windows\Centrala.runtimeconfig.json
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\bin\Debug\net6.0-windows\Centrala.dll
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\bin\Debug\net6.0-windows\Centrala.pdb
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\Centrala.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\Centrala.Form1.resources
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\Centrala.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\Centrala.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\Centrala.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\Centrala.AssemblyInfo.cs
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\Centrala.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\Centrala.dll
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\refint\Centrala.dll
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\Centrala.pdb
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\Centrala.genruntimeconfig.cache
+C:\Users\PC\source\repos\DSUMProjekat\Centrala\obj\Debug\net6.0-windows\ref\Centrala.dll

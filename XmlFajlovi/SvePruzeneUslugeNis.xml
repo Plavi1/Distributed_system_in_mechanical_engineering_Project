@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <PruzeneUsluge>
+    <Id>1</Id>
+    <Naziv_Korisnika>Zarko</Naziv_Korisnika>
+    <Naziv_Usluge>Popravka</Naziv_Usluge>
+    <Naziv_Lokacije>Cair</Naziv_Lokacije>
+    <Vreme>2023-05-06T00:00:00+02:00</Vreme>
+    <Opis>Popravka kvara na masini</Opis>
+  </PruzeneUsluge>
+  <PruzeneUsluge>
+    <Id>2</Id>
+    <Naziv_Korisnika>Steva</Naziv_Korisnika>
+    <Naziv_Usluge>Izrada</Naziv_Usluge>
+    <Naziv_Lokacije>Duvaniste</Naziv_Lokacije>
+    <Vreme>2023-04-10T00:00:00+02:00</Vreme>
+    <Opis>Izradjen prototip</Opis>
+  </PruzeneUsluge>
+  <PruzeneUsluge>
+    <Id>3</Id>
+    <Naziv_Korisnika>Safet</Naziv_Korisnika>
+    <Naziv_Usluge>Odrzavanje</Naziv_Usluge>
+    <Naziv_Lokacije>Durlan</Naziv_Lokacije>
+    <Vreme>2024-06-06T00:00:00+02:00</Vreme>
+    <Opis>Odrzavanje sistema</Opis>
+  </PruzeneUsluge>
+  <PruzeneUsluge>
+    <Id>4</Id>
+    <Naziv_Korisnika>Predrag</Naziv_Korisnika>
+    <Naziv_Usluge>Odrzavanje</Naziv_Usluge>
+    <Naziv_Lokacije>Duvaniste</Naziv_Lokacije>
+    <Vreme>2024-06-06T00:00:00+02:00</Vreme>
+    <Opis>Odrzavanje sistema</Opis>
+  </PruzeneUsluge>
+</DocumentElement>
